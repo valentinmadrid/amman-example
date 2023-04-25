@@ -94,10 +94,22 @@ This is how to add the mainnet Token Program to your Local Validator:
 _Add the following program into the "accounts" field in .ammanrc.js_.
 
 ```js
-
+accounts: [
+  {
+    label: "Token Program",
+    accountId: "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA",
+    executable: true,
+  },
+  {
+    label: "Random other example account",
+    accountId: "4VLgNs1jXgdciSidxcaLKfrR9WjATkj6vmTm5yCwNwui",
+    // You can set the cluster on a per account basis
+    cluster: "https://metaplex.devnet.rpcpool.com",
+  },
+];
 ```
 
-It‘s important to set exectuable to true in this context, because we want to clone a program. If you just want to load data from a non exectuable account, set it to false.
+It‘s important to set exectuable to true in this context, because we want to clone a program. If you just want to load data from a non exectuable account, set it to false. You can also specify the RPC URL from where you want to load these accounts.
 
 # Testing with Amman
 
