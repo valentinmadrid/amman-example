@@ -2,7 +2,14 @@ module.exports = {
   validator: {
     killRunningValidators: true,
     programs: [],
-    accounts: [],
+    accounts: [
+      {
+        label: "Pyth SOL/USD",
+        accountId: "H6ARHf6YXhGYeQfUzQNGk6rDNnLBQKrenN712K4AQJEG",
+        executable: false,
+        cluster: 'https://api.mainnet-beta.solana.com'
+      },
+    ],
     jsonRpcUrl: "127.0.0.1",
     websocketUrl: "",
     commitment: "confirmed",
